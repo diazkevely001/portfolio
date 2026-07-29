@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serverless AWS Sentiment Microservice & Benchmarking | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>Serverless AWS Sentiment Microservice & Cross-Platform NLP Benchmarking</h1>
+      <p style="color: var(--text-sub);">AWS Cloud Architecture | Serverless Computing | NLP & Benchmarking</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>Design, deployment, and performance benchmarking of a cloud-native sentiment analysis microservice engineered on Amazon Web Services (AWS). The microservice real-time processes short text payloads to categorize sentiment across four distinct states: positive, negative, neutral, and mixed. The study evaluates serverless cloud execution alongside comparative benchmarking across ChatGPT (GPT-4), Grammarly, AWS Comprehend, and a custom machine learning model.</p>
+    </section>
+
+    <section>
+      <h2>Cloud Architecture & Methodology</h2>
+      <ul>
+        <li><strong>Serverless AWS Infrastructure:</strong> Provisioned an API Gateway HTTP POST endpoint backed by AWS Lambda for scalable execution, using AWS Comprehend for real-time, zero-infrastructure NLP sentiment inference.</li>
+        <li><strong>Dataset Blending & Synthetic Sampling:</strong> Constructed a multi-source text dataset combining Sentiment140, Kaggle entries, and author-generated synthetic data to address missing "mixed" class labels and mitigate dataset imbalance via oversampling and reweighting.</li>
+        <li><strong>Cross-Platform Benchmarking:</strong> Conducted comparative performance evaluations on literary and mythological excerpts, analyzing contextual accuracy, figurative language processing, and literal sentiment boundaries across GPT-4, Grammarly, AWS Comprehend, and Logistic Regression.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables & Source Code</h2>
+      <p>Explore the project documentation alongside the underlying codebase and cloud architecture scripts:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual repository link if available -->
+        <a href="https://github.com/diazkevely001/aws-sentiment-microservice" target="_blank" class="btn">View Source Code on GitHub &rarr;</a>
+        
+        <!-- Replace with your actual PDF report path -->
+        <a href="pdfs/aws.vs.pdf" target="_blank" class="btn btn-outline">View Full Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NN vs. CNN: Handwritten Digit Classification | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>Neural Network & Convolutional Neural Network Benchmarking</h1>
+      <p style="color: var(--text-sub);">Deep Learning | PyTorch | Computer Vision | Model Evaluation</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>A comparative evaluation of a standard Feedforward Neural Network (NN) and a Convolutional Neural Network (CNN) built with PyTorch. Evaluated on the USPS handwritten digits dataset using a stratified 5-fold cross-validation setup, the study analyzes architectural trade-offs, spatial feature extraction, and generalization efficiency across deep learning frameworks.</p>
+    </section>
+
+    <section>
+      <h2>Preprocessing & Model Architectures</h2>
+      <ul>
+        <li><strong>Data Pipeline & Preprocessing:</strong> Filtered OpenML data to digits 0–9, standardized features via <code>StandardScaler</code>, and reshaped flat input vectors into 16&times;16 single-channel grayscale image matrices for spatial convolution.</li>
+        <li><strong>Feedforward Neural Network (NN):</strong> Built a dense PyTorch network (256 &rarr; 128 &rarr; 64 &rarr; 10) with ReLU activations, CrossEntropy Loss, and Adam optimization, achieving 97.33% &plusmn; 0.24% average accuracy across 5 folds.</li>
+        <li><strong>Convolutional Neural Network (CNN):</strong> Designed a lightweight PyTorch CNN utilizing 2D convolutions (8 filters, 3&times;3 kernel), ReLU, 2&times;2 max-pooling, and dense linear layers (512 &rarr; 64 &rarr; 10), achieving 97.66% &plusmn; 0.46% average accuracy by preserving spatial topology.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables</h2>
+      <p>Explore the full analytical paper detailing model architectures, loss decay curves, and cross-validation comparisons:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual PDF report path in your documents folder -->
+        <a href="pdfs/hw4.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

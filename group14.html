@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From-Scratch Neural Network for PII Detection | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>From-Scratch Neural Network for Personally Identifiable Information (PII) Detection</h1>
+      <p style="color: var(--text-sub);">Deep Learning Theory | Custom Neural Architectures | Cybersecurity & Data Privacy</p>
+    </header>
+
+    <section>
+      <h2>Project & Business Context</h2>
+      <p>A collaborative deep learning initiative designed to build a custom, multi-layer neural network from scratch for binary classification of Personally Identifiable Information (PII) in corporate documents. Built as an in-house security mechanism, the system scans business text to automatically detect and flag sensitive consumer and enterprise data before transmission—mitigating severe compliance, financial, and legal liabilities.</p>
+    </section>
+
+    <section>
+      <h2>Key Methodologies & Technical Pillars</h2>
+      <ul>
+        <li><strong>Data Engineering & Text Embeddings:</strong> Formatted and cleaned document datasets, transforming unstructured text into dense vector representations optimized for custom neural network inputs.</li>
+        <li><strong>Custom Architecture & Backpropagation Mechanics:</strong> Implemented linear network layers, custom activation steps, loss functions, and forward/backward propagation algorithms from foundational mathematical principles.</li>
+        <li><strong>Model Lifecycle & Live Inference:</strong> Executed 60-epoch training cycles to produce optimized static weight parameters, saving configurations to file for automated real-time inference testing on unseen text payloads.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables</h2>
+      <p>Explore the full technical documentation, mathematical walkthroughs, and architectural breakdown:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual PDF report path in your documents folder -->
+        <a href="pdfs/group14.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Metrics: Harry Potter Box Office Analytics | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>Magic Metrics: The Key to Harry Potter's Success</h1>
+      <p style="color: var(--text-sub);">Exploratory Data Analysis | Hypothesis Testing | Box Office & Financial Modeling</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>An exploratory data analysis and hypothesis testing project investigating the drivers of financial and critical success across the eight-film Harry Potter franchise. The study integrates multiple datasets to analyze the mathematical relationships between production budgets, character density, audience ratings, and global box office returns.</p>
+    </section>
+
+    <section>
+      <h2>Key Methodologies & Tools</h2>
+      <ul>
+        <li><strong>Data Aggregation & Cleaning:</strong> Merged disparate movie datasets, transformed financial values, and normalized ratings features using Pandas and NumPy.</li>
+        <li><strong>Hypothesis Testing & Statistical Analysis:</strong> Conducted statistical evaluations to measure correlations between production expenditure, runtime length, character appearance metrics, and ROI.</li>
+        <li><strong>Data Visualization:</strong> Created statistical distributions, scatter plots, and trends using Matplotlib to highlight performance variance across the series release timeline.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables</h2>
+      <p>Access the full analytical report detailing the methodology, data transformations, statistical tests, and visual breakdowns:</p>
+      
+      <!-- Option A: If you have a PDF report saved in a documents folder -->
+      <a href="pdfs/da621.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+    </section>
+  </div>
+
+</body>
+</html>

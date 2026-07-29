@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalable Sentiment Classification: Word2Vec & Benchmarking | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>Scalable Sentiment Classification: Word2Vec Vectorization and Document Length Benchmarking</h1>
+      <p style="color: var(--text-sub);">Natural Language Processing (NLP) | Machine Learning | Semantic Embeddings</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>An end-to-end Natural Language Processing (NLP) machine learning pipeline designed to classify textual sentiment across massive social media datasets. Moving beyond traditional frequency-based text representations (such as TF-IDF or Bag-of-Words), this study implements dense, distributed word embeddings using Word2Vec skip-gram architectures on the 1.6-million-record Sentiment140 dataset.</p>
+    </section>
+
+    <section>
+      <h2>Key Methodologies & Pipeline Architecture</h2>
+      <ul>
+        <li><strong>Regex Text Preprocessing & Noise Reduction:</strong> Built automated text-cleaning pipelines to strip URLs, user mentions (@username), punctuation, special characters, and empty rows, followed by stratified train-test partitioning.</li>
+        <li><strong>Word2Vec Skip-Gram Embeddings:</strong> Tokenized over 13.5M total tokens across a 400,000+ unique word vocabulary, generating 200-dimensional dense feature vectors via document-level embedding averaging.</li>
+        <li><strong>Classification & Evaluation:</strong> Modelled sentiment using a multinomial Logistic Regression classifier with class weighting, achieving a consistent 75% overall test accuracy and balanced F1-scores (0.75 negative / 0.76 positive).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables & Source Code</h2>
+      <p>Explore the complete analytical report alongside the underlying Python source code for the NLP preprocessing pipeline:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual repository link -->
+        <a href="https://github.com/diazkevely001/nlp-sentiment-pipeline" target="_blank" class="btn">View Source Code on GitHub &rarr;</a>
+        
+        <!-- Replace with your actual PDF report path -->
+        <a href="pdfs/AnalyseMe.vs.pdf" target="_blank" class="btn btn-outline">View Full Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

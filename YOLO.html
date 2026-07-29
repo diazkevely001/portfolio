@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLOv5 vs YOLOv8: Aerial Object Detection Benchmark | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>YOLOv5 vs. YOLOv8: Aerial View Object Detection & Benchmarking</h1>
+      <p style="color: var(--text-sub);">Computer Vision | Deep Learning | Real-Time Object Detection | Performance Evaluation</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>A rigorous comparative study evaluating an anchor-based object detection model (YOLOv5) against a newer, anchor-free architecture (YOLOv8). Utilizing aerial vehicle detection datasets (~1,000 high-resolution parking lot images), the benchmark tracks model performance across three scaling sizes (Nano, Small, Medium) and 18 distinct training sessions to analyze learning convergence, validation loss stability, and real-time video inference speeds.</p>
+    </section>
+
+    <section>
+      <h2>Key Methodologies & Benchmark Insights</h2>
+      <ul>
+        <li><strong>Multi-Variant Training Pipeline:</strong> Trained 18 computational sessions combining 3 model scales (n, s, m) across 30, 50, and 100 epoch cycles to evaluate mAP@0.5, mAP@0.5:0.95, validation box loss, and classification loss.</li>
+        <li><strong>Real-Time Inference & Hardware Profiling:</strong> Evaluated real-time video inference performance over intersection feeds, documenting computational overhead, memory demands, and latency differences between legacy and modern YOLO architectures.</li>
+        <li><strong>Architectural Stability Comparison:</strong> Demonstrated that YOLOv5m achieved superior precision, smoother loss convergence, and lower validation box loss on constrained aerial data, whereas YOLOv8 exhibited loss volatility requiring early stopping and fine-tuned hyperparameter optimization.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables</h2>
+      <p>Access the complete analytical report detailing loss curves, mAP progression charts, and real-time video inference comparisons:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual PDF report path in your documents folder -->
+        <a href="pdfs/yolo.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Market Analysis & Product Clustering | Case Study</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 2rem;
+    }
+
+    h2 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; }
+    p { color: var(--text-sub); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; color: var(--text-sub); }
+    li { margin-bottom: 0.5rem; }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <header>
+      <h1>E-Commerce Market Analysis and Product Clustering for Retail Inventory Optimization</h1>
+      <p style="color: var(--text-sub);">Data Mining | Market-Basket Analysis | Unsupervised Learning | Inventory Control</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>An exploratory data mining and market analysis initiative conducted on the UC Irvine <code>onlineRetail2</code> transactional database (~400K cleaned rows). The investigation models customer purchasing behavior, extracts co-occurrence rules across 18,536 unique invoice baskets, and leverages NLP text clustering to optimize retail inventory control, product bundling, and seasonal sales strategies.</p>
+    </section>
+
+    <section>
+      <h2>Key Methodologies & Technical Pillars</h2>
+      <ul>
+        <li><strong>Dataset Diagnostics & Preprocessing:</strong> Audited 540K+ raw records, filtering null values and negative volume entries to create a clean 397,925-row transactional matrix for revenue profiling across global markets.</li>
+        <li><strong>Market-Basket Association Rules (Apriori Algorithm):</strong> Consolidated item lines into invoice baskets to surface affinity metrics (support, confidence, conviction), identifying product complementary patterns and binned quantity intensity behaviors.</li>
+        <li><strong>TF-IDF & K-Means Inventory Clustering:</strong> Vectorized item descriptions into a 2,031-term TF-IDF feature space, using <code>scikit-learn</code> K-means clustering to segment inventory into 5 distinct thematic product categories.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Deliverables</h2>
+      <p>Access the full analytical report detailing the Apriori rule configurations, TF-IDF cluster breakdowns, and strategic business recommendations:</p>
+      
+      <div class="btn-group">
+        <!-- Replace with your actual PDF report path in your documents folder -->
+        <a href="pdfs/mis776.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

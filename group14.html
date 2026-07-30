@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From-Scratch Neural Network for PII Detection | Case Study</title>
+  <title>Project Case Study & Presentation Deck</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -73,6 +73,72 @@
     .btn-outline:hover {
       background-color: rgba(56, 189, 248, 0.1);
     }
+
+    /* Interactive Carousel Styles */
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      background-color: #020617;
+    }
+
+    .carousel-slide {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(15, 23, 42, 0.75);
+      color: var(--accent);
+      border: 1px solid #334155;
+      font-size: 1.5rem;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+      user-select: none;
+    }
+
+    .carousel-btn:hover {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .prev-btn { left: 15px; }
+    .next-btn { right: 15px; }
+
+    .slide-counter {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      background-color: rgba(15, 23, 42, 0.85);
+      color: var(--text-sub);
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      border: 1px solid #334155;
+    }
   </style>
 </head>
 <body>
@@ -81,51 +147,89 @@
     <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
 
     <header>
-      <h1>From-Scratch Neural Network for Personally Identifiable Information (PII) Detection</h1>
-      <p style="color: var(--text-sub);">Deep Learning Theory | Custom Neural Architectures | Cybersecurity & Data Privacy</p>
+      <h1>From-Scratch Neural Network for PII Detection</h1>
+      <p style="color: var(--text-sub);">Deep Learning Theory | Custom Neural Architectures | Data Privacy</p>
     </header>
 
     <section>
-      <h2>Project & Business Context</h2>
-      <p>A collaborative deep learning initiative designed to build a custom, multi-layer neural network from scratch for binary classification of Personally Identifiable Information (PII) in corporate documents. Built as an in-house security mechanism, the system scans business text to automatically detect and flag sensitive consumer and enterprise data before transmission—mitigating severe compliance, financial, and legal liabilities.</p>
+      <h2>Project Overview</h2>
+      <p>A multi-layered neural network built from scratch for binary classification to identify Personally Identifiable Information (PII) within corporate documents and prevent compliance risk.</p>
     </section>
 
-    <section>
-      <h2>Key Methodologies & Technical Pillars</h2>
-      <ul>
-        <li><strong>Data Engineering & Text Embeddings:</strong> Formatted and cleaned document datasets, transforming unstructured text into dense vector representations optimized for custom neural network inputs.</li>
-        <li><strong>Custom Architecture & Backpropagation Mechanics:</strong> Implemented linear network layers, custom activation steps, loss functions, and forward/backward propagation algorithms from foundational mathematical principles.</li>
-        <li><strong>Model Lifecycle & Live Inference:</strong> Executed 60-epoch training cycles to produce optimized static weight parameters, saving configurations to file for automated real-time inference testing on unseen text payloads.</li>
-      </ul>
-    </section>
-
+    <!-- Interactive Presentation Deck Section -->
     <section id="presentation">
-  <h2>Interactive Presentation Deck</h2>
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-    <!-- Paste your Google Slides iframe here -->
-    <iframe 
-      src="https://docs.google.com/presentation/d/1cojqekYDqKeLR5AqiGwO4IZG-d6jjmpc9POtkyIzQgI/edit?usp=sharing" 
-      frameborder="0" 
-      width="100%" 
-      height="100%" 
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;" 
-      allowfullscreen="true" 
-      mozallowfullscreen="true" 
-      webkitallowfullscreen="true">
-    </iframe>
-  </div>
-</section>
+      <h2>Interactive Presentation Deck</h2>
+      <p style="color: var(--text-sub); margin-bottom: 1rem;">Use the arrows below to flip through the project slide deck:</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <!-- Slide 1 gets the active class to display first -->
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14.png" class="slide-img active" alt="Slide 1">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy.png" class="slide-img" alt="Slide 2">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 2.png" class="slide-img" alt="Slide 3">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 3.png" class="slide-img" alt="Slide 4">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 4.png" class="slide-img" alt="Slide 5">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 5.png" class="slide-img" alt="Slide 6">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 5.png" class="slide-img" alt="Slide 7">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 6.png" class="slide-img" alt="Slide 8">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 7.png" class="slide-img" alt="Slide 9">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 8.png" class="slide-img" alt="Slide 10">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 9.png" class="slide-img" alt="Slide 11">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 10.png" class="slide-img" alt="Slide 12">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 11.png" class="slide-img" alt="Slide 13">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 12.png" class="slide-img" alt="Slide 14">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 13.png" class="slide-img" alt="Slide 15">
+          <img src="group14Presentation/MIS 769 - TeachMe - Group 14 copy 14.png" class="slide-img" alt="Slide 16">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&larr;</button>
+        <button class="carousel-btn next-btn" onclick="moveSlide(1)">&rarr;</button>
+
+        <!-- Slide Counter Indicator -->
+        <div class="slide-counter">
+          Slide <span id="current-slide">1</span> of <span id="total-slides">16</span>
+        </div>
+      </div>
+    </section>
 
     <section>
       <h2>Project Deliverables</h2>
-      <p>Explore the full technical documentation, mathematical walkthroughs, and architectural breakdown:</p>
+      <p>Access the full written report detailing network architecture and mathematical mechanics:</p>
       
       <div class="btn-group">
-        <!-- Replace with your actual PDF report path in your documents folder -->
         <a href="pdfs/group14.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
       </div>
     </section>
   </div>
 
+  <!-- Interactive Slide Navigation Script -->
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const currentSlideText = document.getElementById('current-slide');
+    const totalSlidesText = document.getElementById('total-slides');
+
+    if (totalSlidesText && slides.length > 0) {
+      totalSlidesText.textContent = slides.length;
+    }
+
+    function moveSlide(direction) {
+      slides[currentSlideIndex].classList.remove('active');
+
+      currentSlideIndex += direction;
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      slides[currentSlideIndex].classList.add('active');
+      if (currentSlideText) {
+        currentSlideText.textContent = currentSlideIndex + 1;
+      }
+    }
+  </script>
 </body>
 </html>
+    

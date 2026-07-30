@@ -215,5 +215,39 @@
     </section>
   </div>
 
+  <!-- Interactive Slide Navigation Script -->
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const currentSlideText = document.getElementById('current-slide');
+    const totalSlidesText = document.getElementById('total-slides');
+
+    // Update total slide count dynamically
+    if (totalSlidesText && slides.length > 0) {
+      totalSlidesText.textContent = slides.length;
+    }
+
+    function moveSlide(direction) {
+      if (slides.length === 0) return;
+
+      // Hide currently active slide
+      slides[currentSlideIndex].classList.remove('active');
+
+      // Calculate next index with loop wrap-around
+      currentSlideIndex += direction;
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      // Show new slide and update counter
+      slides[currentSlideIndex].classList.add('active');
+      if (currentSlideText) {
+        currentSlideText.textContent = currentSlideIndex + 1;
+      }
+    }
+  </script>
 </body>
 </html>
+

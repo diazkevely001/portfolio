@@ -165,18 +165,77 @@
       </ul>
     </section>
 
+    <!-- Interactive Presentation Deck Section -->
+    <section id="presentation">
+      <h2>Interactive Presentation Deck</h2>
+      <p style="color: var(--text-sub); margin-bottom: 1rem;">Use the arrows below to flip through the project slide deck:</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <!-- Slide 1 gets the active class to display first -->
+          <img src="da621/da621-1.png" class="slide-img active" alt="Slide 1">
+          <img src="da621/da621-2.png" class="slide-img" alt="Slide 2">
+          <img src="da621/da621-3.png" class="slide-img" alt="Slide 3">
+          <img src="da621/da621-4.png" class="slide-img" alt="Slide 4">
+          <img src="da621/da621-5.png" class="slide-img" alt="Slide 5">
+          <img src="da621/da621-6.png" class="slide-img" alt="Slide 6">
+          <img src="da621/da621-7.png" class="slide-img" alt="Slide 7">
+          <img src="da621/da621-8.png" class="slide-img" alt="Slide 8">
+          <img src="da621/da621-9.png" class="slide-img" alt="Slide 9">
+          <img src="da621/da621-10.png" class="slide-img" alt="Slide 10">
+          <img src="da621/da621-11.png" class="slide-img" alt="Slide 11">
+          <img src="da621/da621-12.png" class="slide-img" alt="Slide 12">
+          
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&larr;</button>
+        <button class="carousel-btn next-btn" onclick="moveSlide(1)">&rarr;</button>
+
+        <!-- Slide Counter Indicator -->
+        <div class="slide-counter">
+          Slide <span id="current-slide">1</span> of <span id="total-slides">16</span>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2>Project Deliverables</h2>
       <p>Access the full analytical report detailing the methodology, data transformations, statistical tests, and visual breakdowns:</p>
       
       <!-- PDF Report Link -->
-    <a href="pdfs/group14.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+    <a href="pdfs/DA621 analysis report.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
     
-    <!-- Video Presentation Link (Replace URL below with YouTube/Vimeo/Drive link) -->
-    <a href="https://canva.link/7p4y40fdvjxx8kj" target="_blank" class="btn btn-outline">Watch Video Presentation &rarr;</a>
   </div>
 </section>
   </div>
 
+  <!-- Interactive Slide Navigation Script -->
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const currentSlideText = document.getElementById('current-slide');
+    const totalSlidesText = document.getElementById('total-slides');
+
+    if (totalSlidesText && slides.length > 0) {
+      totalSlidesText.textContent = slides.length;
+    }
+
+    function moveSlide(direction) {
+      slides[currentSlideIndex].classList.remove('active');
+
+      currentSlideIndex += direction;
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      slides[currentSlideIndex].classList.add('active');
+      if (currentSlideText) {
+        currentSlideText.textContent = currentSlideIndex + 1;
+      }
+    }
+  </script>
 </body>
 </html>

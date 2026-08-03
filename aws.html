@@ -73,8 +73,73 @@
     .btn-outline:hover {
       background-color: rgba(56, 189, 248, 0.1);
     }
+
+    /* Interactive Carousel Styles */
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      background-color: #020617;
+    }
+
+    .carousel-slide {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(15, 23, 42, 0.75);
+      color: var(--accent);
+      border: 1px solid #334155;
+      font-size: 1.5rem;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+      user-select: none;
+    }
+
+    .carousel-btn:hover {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .prev-btn { left: 15px; }
+    .next-btn { right: 15px; }
+
+    .slide-counter {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      background-color: rgba(15, 23, 42, 0.85);
+      color: var(--text-sub);
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      border: 1px solid #334155;
+    }
   </style>
-</head>
 <body>
 
   <div class="container">
@@ -99,6 +164,40 @@
       </ul>
     </section>
 
+    <!-- Interactive Presentation Deck Section -->
+    <section id="presentation">
+      <h2>Interactive Presentation Deck</h2>
+      <p style="color: var(--text-sub); margin-bottom: 1rem;">Use the arrows below to flip through the project slide deck:</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <!-- Slide 1 gets the active class to display first -->
+          <img src="da622/da622-1.png" class="slide-img active" alt="Slide 1">
+          <img src="da622/da622-2.png" class="slide-img" alt="Slide 2">
+          <img src="da622/da622-3.png" class="slide-img" alt="Slide 3">
+          <img src="da622/da622-4.png" class="slide-img" alt="Slide 4">
+          <img src="da622/da622-5.png" class="slide-img" alt="Slide 5">
+          <img src="da622/da622-6.png" class="slide-img" alt="Slide 6">
+          <img src="da622/da622-7.png" class="slide-img" alt="Slide 7">
+          <img src="da622/da622-8.png" class="slide-img" alt="Slide 8">
+          <img src="da622/da622-9.png" class="slide-img" alt="Slide 9">
+          <img src="da622/da622-10.png" class="slide-img" alt="Slide 10">
+          <img src="da622/da622-11.png" class="slide-img" alt="Slide 11">
+          <img src="da622/da622-12.png" class="slide-img" alt="Slide 12">
+          
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&larr;</button>
+        <button class="carousel-btn next-btn" onclick="moveSlide(1)">&rarr;</button>
+
+        <!-- Slide Counter Indicator -->
+        <div class="slide-counter">
+          Slide <span id="current-slide">1</span> of <span id="total-slides">16</span>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2>Project Deliverables</h2>
       <p>Explore the project documentation and cloud architecture details:</p>
@@ -109,5 +208,35 @@
     </section>
   </div>
 
+  </section>
+  </div>
+
+  <!-- Interactive Slide Navigation Script -->
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const currentSlideText = document.getElementById('current-slide');
+    const totalSlidesText = document.getElementById('total-slides');
+
+    if (totalSlidesText && slides.length > 0) {
+      totalSlidesText.textContent = slides.length;
+    }
+
+    function moveSlide(direction) {
+      slides[currentSlideIndex].classList.remove('active');
+
+      currentSlideIndex += direction;
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      slides[currentSlideIndex].classList.add('active');
+      if (currentSlideText) {
+        currentSlideText.textContent = currentSlideIndex + 1;
+      }
+    }
+  </script>
 </body>
 </html>

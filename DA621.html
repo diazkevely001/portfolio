@@ -48,6 +48,13 @@
     ul { margin-left: 1.5rem; color: var(--text-sub); }
     li { margin-bottom: 0.5rem; }
 
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
     .btn {
       display: inline-block;
       background-color: var(--accent);
@@ -56,7 +63,81 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin-top: 0.5rem;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover {
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Interactive Carousel Styles */
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      background-color: #020617;
+    }
+
+    .carousel-slide {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(15, 23, 42, 0.75);
+      color: var(--accent);
+      border: 1px solid #334155;
+      font-size: 1.5rem;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+      user-select: none;
+    }
+
+    .carousel-btn:hover {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .prev-btn { left: 15px; }
+    .next-btn { right: 15px; }
+
+    .slide-counter {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      background-color: rgba(15, 23, 42, 0.85);
+      color: var(--text-sub);
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      border: 1px solid #334155;
     }
   </style>
 </head>
@@ -88,9 +169,13 @@
       <h2>Project Deliverables</h2>
       <p>Access the full analytical report detailing the methodology, data transformations, statistical tests, and visual breakdowns:</p>
       
-      <!-- Option A: If you have a PDF report saved in a documents folder -->
-      <a href="pdfs/DA621 analysis report.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
-    </section>
+      <!-- PDF Report Link -->
+    <a href="pdfs/group14.vs.pdf" target="_blank" class="btn">View Full Analytical Report (PDF) &rarr;</a>
+    
+    <!-- Video Presentation Link (Replace URL below with YouTube/Vimeo/Drive link) -->
+    <a href="https://canva.link/7p4y40fdvjxx8kj" target="_blank" class="btn btn-outline">Watch Video Presentation &rarr;</a>
+  </div>
+</section>
   </div>
 
 </body>
